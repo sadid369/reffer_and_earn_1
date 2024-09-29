@@ -20,6 +20,8 @@ class AppImage {
   static const String crownIcon = 'assets/images/crown-icon.png';
   static const String giftCardIcon = 'assets/images/gift-card-icon.png';
   static const String profileImageIcon = 'assets/images/profile-image-icon.png';
+  static const String profileImagePinkIcon =
+      'assets/images/profile-image-pink-icon.png';
   static const String receiveIcon = 'assets/images/receive-icon.png';
   static const String rewardIcon = 'assets/images/reward-icon.png';
   static const String rupeeIcon = 'assets/images/rupee-icon.png';

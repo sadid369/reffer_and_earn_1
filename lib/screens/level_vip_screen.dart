@@ -158,21 +158,16 @@ class card extends StatelessWidget {
                         width * 0.04,
                       ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(3),
-                          child: Text(
-                            'VIP Member',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: width * 0.03,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                    child: Padding(
+                      padding: EdgeInsets.all(width * 0.008),
+                      child: Text(
+                        'VIP Member',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: width * 0.03,
+                          fontWeight: FontWeight.bold,
                         ),
-                      ],
+                      ),
                     ),
                   )
                 ],
