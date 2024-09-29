@@ -34,4 +34,5 @@ class AppImage {
   static const String whatsAppIcon = 'assets/images/whatsApp-icon .png';
   static const String phoneIcon = 'assets/images/phone-icon.png';
   static const String messageIcon = 'assets/images/message-icon.png';
+  static const String networkIcon = 'assets/images/network-icon.png';
 }
