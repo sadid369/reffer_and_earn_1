@@ -37,4 +37,7 @@ class AppImage {
   static const String phoneIcon = 'assets/images/phone-icon.png';
   static const String messageIcon = 'assets/images/message-icon.png';
   static const String networkIcon = 'assets/images/network-icon.png';
+  static const String crownImage = 'assets/images/crown-image.png';
+  static const String profileImageYellowIcon =
+      'assets/images/profile-image-yellow-icon.png';
 }

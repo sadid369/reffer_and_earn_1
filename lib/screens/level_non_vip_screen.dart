@@ -21,6 +21,7 @@ class LevelNonVipScreen extends StatelessWidget {
         children: [
           Container(
             width: width,
+            height: width * 0.1,
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
                 color: Color(0xffFFFAF9)),
