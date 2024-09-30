@@ -34,10 +34,15 @@ class AppImage {
   static const String udharIcon = 'assets/images/udhar-icon.png';
   static const String diamondIcon = 'assets/images/diamond-pic.png';
   static const String whatsAppIcon = 'assets/images/whatsApp-icon .png';
+  static const String whatsAppIcon2 = 'assets/images/whatsApp-icon-2.png';
   static const String phoneIcon = 'assets/images/phone-icon.png';
+  static const String phoneIcon2 = 'assets/images/phone-icon-2.png';
   static const String messageIcon = 'assets/images/message-icon.png';
+  static const String messageIcon2 = 'assets/images/message-icon-2.png';
   static const String networkIcon = 'assets/images/network-icon.png';
   static const String crownImage = 'assets/images/crown-image.png';
   static const String profileImageYellowIcon =
       'assets/images/profile-image-yellow-icon.png';
+  static const String profileImageGreenIcon =
+      'assets/images/profile-image-green-icon.png';
 }
