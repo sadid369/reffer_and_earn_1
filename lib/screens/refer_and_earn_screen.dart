@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:reffer_and_earn_1/common/color_converter.dart';
 
 import '../common/app_image.dart';
 
@@ -15,7 +16,11 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(
+    // popup();
+  }
+
+  Future<Null> popup() {
+    return Future.delayed(
       Duration.zero,
       () {
         showDialog(
@@ -111,7 +116,7 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    // final height = MediaQuery.of(context).size.height;
+    final height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -142,254 +147,172 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                   ],
                 ),
               ),
+              //Main Banner
               Container(
-                alignment: Alignment.centerLeft,
                 width: width,
-                // padding: EdgeInsets.only(left: width * 0.03),
-                height: width * 0.95,
-                decoration: const BoxDecoration(
-                  border: Border(bottom: BorderSide(color: Color(0xffADAAAA))),
+                height: height * 0.22,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(
+                    AppImage.mainBanner,
+                  ),
+                )),
+              ),
+              // 343777
+              Container(
+                margin: EdgeInsets.symmetric(vertical: width * 0.02),
+                width: width,
+                height: height * 0.1,
+                decoration: BoxDecoration(
+                  color: ColorConverter.stringToColor('#FFF0A3'),
                 ),
-                child: Stack(
+                child: Row(
                   children: [
-                    Positioned(
-                      top: width * 0.0,
-                      child: Container(
-                        width: width,
-                        height: width * 0.6,
-                        decoration: const BoxDecoration(
-                          color: Color(0xffD0F1FF),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Make your shopping free',
-                              style: TextStyle(
-                                fontSize: width * 0.06,
-                                fontWeight: FontWeight.bold,
-                              ),
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                          vertical: width * 0.02, horizontal: width * 0.02),
+                      width: width * 0.47,
+                      height: height * 0.1,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(width * 0.02),
+                        color: ColorConverter.stringToColor('#63FD67'),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '343777',
+                            style: TextStyle(
+                              fontSize: width * 0.035,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             ),
-                            Text(
-                              'Earn 1000 Lifeline Cash on each Referral',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: width * 0.035,
-                              ),
+                          ),
+                          Text(
+                            'Direct Referrals Earnings',
+                            style: TextStyle(
+                              fontSize: width * 0.035,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             ),
-                            SizedBox(
-                              width: width,
-                              height: width * 0.4,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  circularCard(
-                                    width: width,
-                                    image: AppImage.notifiersPic,
-                                    title: 'Invite a friend and family',
-                                  ),
-                                  SizedBox(
-                                    width: width * 0.1,
-                                    child:
-                                        Image.asset(AppImage.arrowForwardPic),
-                                  ),
-                                  circularCard(
-                                    width: width,
-                                    image: AppImage.creditCardSmallPic,
-                                    title: 'Friend activate VIP Membership',
-                                  ),
-                                  SizedBox(
-                                      width: width * 0.1,
-                                      child: Image.asset(
-                                          AppImage.arrowForwardPic)),
-                                  circularCard(
-                                    width: width,
-                                    image: AppImage.walletNewPic,
-                                    title:
-                                        'Get 1000 Lifeline Cash on each Referral',
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: width * 0.02),
+                      width: width * 0.47,
+                      height: height * 0.1,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(width * 0.02),
+                        color: ColorConverter.stringToColor('#FFBF30'),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '343777',
+                            style: TextStyle(
+                              fontSize: width * 0.035,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Direct Referrals Earnings',
+                            style: TextStyle(
+                              fontSize: width * 0.035,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: width * 0.95,
+                height: height * 0.17,
+                padding: EdgeInsets.symmetric(horizontal: width * 0.02),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(width * 0.05),
+                  border: Border.all(color: Colors.black),
+                ),
+                margin: EdgeInsets.all(width * 0.03),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(bottom: width * 0.01),
+                      child: Text(
+                        'Your Referral Code',
+                        style: TextStyle(
+                          fontSize: width * 0.03,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                    Positioned(
-                      bottom: width * 0.015,
-                      right: width * 0.02,
-                      left: width * 0.02,
-                      child: Container(
-                        width: width * 0.8,
-                        height: width * 0.4,
-                        padding: EdgeInsets.all(width * 0.01),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                            width * 0.03,
-                          ),
-                          color: Colors.white,
-                          border: Border.all(
-                            color: Colors.black,
-                          ),
+                    TextField(
+                      decoration: InputDecoration(
+                        hintText: 'SATISH954332',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(width * 0.03),
                         ),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: width * 0.3,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          SizedBox(
-                                              width: width * 0.1,
-                                              height: width * 0.16,
-                                              child: Image.asset(
-                                                  AppImage.trophyPic)),
-                                          Gap(width * 0.013),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                'You earn',
-                                                style: TextStyle(
-                                                  fontSize: width * 0.035,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                              const Row(
-                                                children: [
-                                                  Text(
-                                                    '1000 ',
-                                                    style: TextStyle(
-                                                        color: Colors.green),
-                                                  ),
-                                                  Text('Lifeline Cash')
-                                                ],
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        width: width * 0.4,
-                                        child: Text(
-                                          textAlign: TextAlign.start,
-                                          'Use Lifeline Cash as Real Cash to shop on Everywhere...',
-                                          style: TextStyle(
-                                              fontSize: width * 0.027,
-                                              fontWeight: FontWeight.bold,
-                                              color: const Color(
-                                                0xff85879E,
-                                              )),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  const VerticalDivider(
-                                    color: Color(0xffD9D9D9),
-                                    thickness: 1,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          SizedBox(
-                                            width: width * 0.15,
-                                            height: width * 0.16,
-                                            child: Image.asset(
-                                              AppImage.giftCardIcon,
-                                            ),
-                                          ),
-                                          Gap(width * 0.01),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                'You Friend Get',
-                                                style: TextStyle(
-                                                  fontSize: width * 0.035,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                              const Row(
-                                                children: [
-                                                  Text(
-                                                    '1',
-                                                    style: TextStyle(
-                                                        color: Colors.green),
-                                                  ),
-                                                  Text('Gift Card')
-                                                ],
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        width: width * 0.45,
-                                        child: Text(
-                                          textAlign: TextAlign.start,
-                                          'Use Lifeline Cash as Real Cash to shop on LifeLineKart...',
-                                          style: TextStyle(
-                                              fontSize: width * 0.027,
-                                              fontWeight: FontWeight.bold,
-                                              color: const Color(
-                                                0xff85879E,
-                                              )),
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
+                        suffixIcon: Container(
+                          alignment: Alignment.center,
+                          width: width * 0.2,
+                          height: height * 0.01,
+                          margin: EdgeInsets.all(width * 0.015),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(width * 0.03),
+                            border: Border.all(color: Colors.black),
+                          ),
+                          child: Text(
+                            'Copy Code',
+                            style: TextStyle(
+                              fontSize: width * 0.03,
+                              fontWeight: FontWeight.bold,
                             ),
-                            Container(
-                              padding: EdgeInsets.all(width * 0.015),
-                              width: width,
-                              decoration: const BoxDecoration(
-                                border: Border(
-                                  top: BorderSide(
-                                    color: Colors.black,
-                                  ),
-                                ),
-                              ),
-                              child: Text(
-                                textAlign: TextAlign.center,
-                                'Use Lifeline Cash as Real Cash to shop on Everywhere...',
-                                style: TextStyle(
-                                  color:
-                                      const Color.fromARGB(255, 235, 211, 94),
-                                  fontSize: width * 0.03041,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            )
-                          ],
+                          ),
                         ),
                       ),
-                    )
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: width,
+                      height: height * 0.04,
+                      margin: EdgeInsets.symmetric(
+                          horizontal: width * 0.005, vertical: height * 0.01),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: width * 0.05,
+                        vertical: width * 0.01,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(width * 0.02),
+                        color: ColorConverter.stringToColor('#6380D5'),
+                      ),
+                      child: Text(
+                        'Refer and Earn 1000 Real Cash',
+                        style: TextStyle(
+                          fontSize: width * 0.04,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(top: width * 0.015),
                 decoration: const BoxDecoration(
-                  color: Color(
-                    0xffEDEDED,
-                  ),
-                ),
+                    // color: Color(
+                    //   0xffEDEDED,
+                    // ),
+                    ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -409,10 +332,10 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            AppImage.leaderBoardPic,
+                            AppImage.myReferrals,
                           ),
                           const Text(
-                            'Leader Board',
+                            'My Referrals',
                           ),
                         ],
                       ),
@@ -435,12 +358,13 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                           SizedBox(
                             width: width * 0.3,
                             child: Image.asset(
-                              AppImage.achievementPic,
+                              AppImage.myBonce,
+                              fit: BoxFit.contain,
                             ),
                           ),
                           Gap(width * 0.045),
                           const Text(
-                            'Active Rewards',
+                            'My Bounce',
                           ),
                         ],
                       ),
@@ -461,13 +385,13 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                            width: width * 0.24,
+                            width: width * 0.3,
                             child: Image.asset(
-                              AppImage.freePlannerPic,
+                              AppImage.marketingMaterial,
                             ),
                           ),
                           Text(
-                            'Tension Free Life Planner',
+                            'Marketing Materials',
                             style: TextStyle(fontSize: width * 0.025),
                           ),
                         ],
@@ -476,182 +400,22 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                   ],
                 ),
               ),
+
               Container(
-                decoration: BoxDecoration(
-                  // border: Border.all(color: Colors.black),
-                  color: Color(
-                    0xffE5F1D9,
-                  ),
-                ),
-                height: width * 0.28,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(
-                          bottom: width * 0.01, left: width * 0.04),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: width * 0.01, vertical: width * 0.005),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(width * 0.02),
-                        color: Color(0xffEBBC2E),
-                      ),
-                      child: Text('Tention Free Life Target this month'),
-                    ),
-                    SizedBox(
-                      height: width * 0.135,
-                      width: width,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyOnePic,
-                            levelImage: AppImage.levelOnePic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyOnePic,
-                            levelImage: AppImage.levelTwoPic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyOnePic,
-                            levelImage: AppImage.levelThreePic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyOnePic,
-                            levelImage: AppImage.levelFourPic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyOnePic,
-                            levelImage: AppImage.levelFivePic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyOnePic,
-                            levelImage: AppImage.levelSixPic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyOnePic,
-                            levelImage: AppImage.levelSevenPic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyTwoPic,
-                            levelImage: AppImage.levelLockPic,
-                          ),
-                          levelCard(
-                            width: width,
-                            trophyImage: AppImage.levelTrophyTwoPic,
-                            levelImage: AppImage.levelLockPic,
-                          ),
-                          Image.asset(AppImage.dartBoardPic)
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(
-                          top: width * 0.019,
-                          right: width * 0.15,
-                          left: width * 0.01),
-                      height: width * 0.013,
-                      clipBehavior: Clip.hardEdge,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          border: Border.all(color: Colors.black)),
-                      child: const Stack(
-                        alignment: Alignment.centerLeft,
-                        children: [
-                          Positioned.fill(
-                            child: LinearProgressIndicator(
-                              //Here you pass the percentage
-                              value: 0.7,
-                              color: Color(0xff0066907),
-                              backgroundColor: Color(0xffAD0400),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                width: width * 0.95,
-                margin: EdgeInsets.all(width * 0.03),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(bottom: width * 0.01),
-                      child: Text(
-                        'Your Referral Code',
-                        style: TextStyle(
-                          fontSize: width * 0.03,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: 'SATISH954332',
-                        border: OutlineInputBorder(),
-                        suffixIcon: Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween, // added line
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.copy_outlined,
-                              ),
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.share_outlined,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: width * 0.02),
+                margin: EdgeInsets.symmetric(
+                    horizontal: width * 0.03, vertical: width * 0.02),
                 padding: EdgeInsets.symmetric(
-                  horizontal: width * 0.08,
+                  horizontal: width * 0.05,
                   vertical: width * 0.01,
                 ),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(width * 0.02),
-                  color: Color(
-                    0xffEBBC2E,
-                  ),
+                  border: Border.all(color: Colors.grey),
                 ),
-                child: Text(
-                  'Refer A Friend and Earn 1000 Lifeline Cash',
-                  style: TextStyle(
-                    fontSize: width * 0.04,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: width * 0.03),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
-                      'Terms & Condition',
+                      'Learn More',
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: width * 0.05,
@@ -659,19 +423,262 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                       ),
                     ),
                     Text(
-                      'How to Refer?',
+                      ' Refer and Earn',
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: ColorConverter.stringToColor('#FFBF5F'),
                         fontSize: width * 0.05,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
+              GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: width * 0.01,
+                  mainAxisSpacing: width * 0.01,
+                ),
+                itemBuilder: (context, index) => Image.asset(AppImage.aboutRef),
+                itemCount: 4,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Container mainBanner(double width) {
+    return Container(
+      alignment: Alignment.centerLeft,
+      width: width,
+      // padding: EdgeInsets.only(left: width * 0.03),
+      height: width * 0.95,
+      decoration: const BoxDecoration(
+        border: Border(bottom: BorderSide(color: Color(0xffADAAAA))),
+      ),
+      child: Stack(
+        children: [
+          Positioned(
+            top: width * 0.0,
+            child: Container(
+              width: width,
+              height: width * 0.6,
+              decoration: const BoxDecoration(
+                color: Color(0xffD0F1FF),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Make your shopping free',
+                    style: TextStyle(
+                      fontSize: width * 0.06,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'Earn 1000 Lifeline Cash on each Referral',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: width * 0.035,
+                    ),
+                  ),
+                  SizedBox(
+                    width: width,
+                    height: width * 0.4,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        circularCard(
+                          width: width,
+                          image: AppImage.notifiersPic,
+                          title: 'Invite a friend and family',
+                        ),
+                        SizedBox(
+                          width: width * 0.1,
+                          child: Image.asset(AppImage.arrowForwardPic),
+                        ),
+                        circularCard(
+                          width: width,
+                          image: AppImage.creditCardSmallPic,
+                          title: 'Friend activate VIP Membership',
+                        ),
+                        SizedBox(
+                            width: width * 0.1,
+                            child: Image.asset(AppImage.arrowForwardPic)),
+                        circularCard(
+                          width: width,
+                          image: AppImage.walletNewPic,
+                          title: 'Get 1000 Lifeline Cash on each Referral',
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: width * 0.015,
+            right: width * 0.02,
+            left: width * 0.02,
+            child: Container(
+              width: width * 0.8,
+              height: width * 0.4,
+              padding: EdgeInsets.all(width * 0.01),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  width * 0.03,
+                ),
+                color: Colors.white,
+                border: Border.all(
+                  color: Colors.black,
+                ),
+              ),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: width * 0.3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                    width: width * 0.1,
+                                    height: width * 0.16,
+                                    child: Image.asset(AppImage.trophyPic)),
+                                Gap(width * 0.013),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'You earn',
+                                      style: TextStyle(
+                                        fontSize: width * 0.035,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const Row(
+                                      children: [
+                                        Text(
+                                          '1000 ',
+                                          style: TextStyle(color: Colors.green),
+                                        ),
+                                        Text('Lifeline Cash')
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              width: width * 0.4,
+                              child: Text(
+                                textAlign: TextAlign.start,
+                                'Use Lifeline Cash as Real Cash to shop on Everywhere...',
+                                style: TextStyle(
+                                    fontSize: width * 0.027,
+                                    fontWeight: FontWeight.bold,
+                                    color: const Color(
+                                      0xff85879E,
+                                    )),
+                              ),
+                            )
+                          ],
+                        ),
+                        const VerticalDivider(
+                          color: Color(0xffD9D9D9),
+                          thickness: 1,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: width * 0.15,
+                                  height: width * 0.16,
+                                  child: Image.asset(
+                                    AppImage.giftCardIcon,
+                                  ),
+                                ),
+                                Gap(width * 0.01),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'You Friend Get',
+                                      style: TextStyle(
+                                        fontSize: width * 0.035,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const Row(
+                                      children: [
+                                        Text(
+                                          '1',
+                                          style: TextStyle(color: Colors.green),
+                                        ),
+                                        Text('Gift Card')
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              width: width * 0.45,
+                              child: Text(
+                                textAlign: TextAlign.start,
+                                'Use Lifeline Cash as Real Cash to shop on LifeLineKart...',
+                                style: TextStyle(
+                                    fontSize: width * 0.027,
+                                    fontWeight: FontWeight.bold,
+                                    color: const Color(
+                                      0xff85879E,
+                                    )),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(width * 0.015),
+                    width: width,
+                    decoration: const BoxDecoration(
+                      border: Border(
+                        top: BorderSide(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      'Use Lifeline Cash as Real Cash to shop on Everywhere...',
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 235, 211, 94),
+                        fontSize: width * 0.03041,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
