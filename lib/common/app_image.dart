@@ -45,4 +45,31 @@ class AppImage {
       'assets/images/profile-image-yellow-icon.png';
   static const String profileImageGreenIcon =
       'assets/images/profile-image-green-icon.png';
+  static const String levelOnePic = 'assets/images/lavel-one-pic.png';
+  static const String levelTwoPic = 'assets/images/lavel-two-pic.png';
+  static const String levelThreePic = 'assets/images/lavel-three-pic.png';
+  static const String levelFourPic = 'assets/images/lavel-four-pic.png';
+  static const String levelFivePic = 'assets/images/lavel-five-pic.png';
+  static const String levelSixPic = 'assets/images/lavel-six-pic.png';
+  static const String levelSevenPic = 'assets/images/lavel-seven-pic.png';
+  static const String levelLockPic = 'assets/images/lavel-lock-pic.png';
+  static const String levelTrophyOnePic =
+      'assets/images/lavel-trophy-one-pic.png';
+  static const String levelTrophyTwoPic =
+      'assets/images/lavel-trophy-two-pic.png';
+  static const String freePlannerPic = 'assets/images/free-planner-pic.png';
+  static const String dartBoardPic = 'assets/images/dart-board-pic.png';
+  static const String leaderBoardPic = 'assets/images/leader-board-pic.png';
+  static const String creditCardSmallPic =
+      'assets/images/credit-card-small-pic.png';
+  static const String arrowForwardPic = 'assets/images/arrow-forward-icon.png';
+  static const String achievementPic = 'assets/images/achievement--pic.png';
+  static const String trophyPic = 'assets/images/trophy-pic.png';
+  static const String walletNewPic = 'assets/images/wallet-new-icon.png';
+  static const String notifiersPic = 'assets/images/notifiers-pic.png';
+  static const String bannerPic = 'assets/images/banner-pic.png';
+  static const String bigCoinPic = 'assets/images/bigCoinPic.png';
 }
+  
+
+// 090264485
