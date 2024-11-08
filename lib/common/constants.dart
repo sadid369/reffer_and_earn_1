@@ -6,3 +6,4 @@ const String myCardNetworkScreen = 'my_card_network_screen';
 const String myLevelScreen = 'my_level_screen';
 const String referAndEarnScreen = 'refer_and_earn_screen';
 const String yourAccountManagerScreen = 'your_account_manager_screen';
+const String myBonus = 'my_bonus';

@@ -3,6 +3,7 @@ import 'package:reffer_and_earn_1/screens/home_screen.dart';
 import 'package:reffer_and_earn_1/screens/level_non_vip_screen.dart';
 import 'package:reffer_and_earn_1/screens/level_two_vip_screen.dart';
 import 'package:reffer_and_earn_1/screens/level_vip_screen.dart';
+import 'package:reffer_and_earn_1/screens/my_bonus.dart';
 import 'package:reffer_and_earn_1/screens/my_card_network_screen.dart';
 import 'package:reffer_and_earn_1/screens/my_level_screen.dart';
 import 'package:reffer_and_earn_1/screens/refer_and_earn_screen.dart';
@@ -41,6 +42,10 @@ class MyRoutes {
       case myLevelScreen:
         return MaterialPageRoute(
           builder: (context) => const MyLevelScreen(),
+        );
+      case myBonus:
+        return MaterialPageRoute(
+          builder: (context) => const MyBonus(),
         );
       default:
         return MaterialPageRoute(

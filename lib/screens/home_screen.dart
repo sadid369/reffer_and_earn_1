@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
       'level_non_vip_screen',
       'level_two_vip_screen',
       'my_level_screen',
+      'my_bonus'
     ];
     return Scaffold(
       backgroundColor: Colors.black,

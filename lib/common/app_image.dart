@@ -72,15 +72,16 @@ class AppImage {
 
   // New Images
   static const String mainBanner = 'assets/images/mainBanner.png';
-  static const String marketingMaterial = 'assets/images/marketingMaterial.png';
+  static const String marketingMaterial = 'assets/images/marketingMaterial.jpg';
   static const String moreBonus = 'assets/images/moreBonus.png';
   static const String moreLimit = 'assets/images/moreLimit.png';
-  static const String myBonce = 'assets/images/myBonce.png';
-  static const String myReferrals = 'assets/images/myRefarrals.png';
+  static const String myBonce = 'assets/images/myBonce.jpg';
+  static const String myReferrals = 'assets/images/myRefarrals.jpg';
   static const String newCard = 'assets/images/newCard.png';
   static const String shareAndEarn = 'assets/images/shareAndEarn.png';
   static const String shoppingOnline = 'assets/images/shopingOnline.png';
   static const String aboutRef = 'assets/images/aboutRef.png';
+  static const String bg = 'assets/images/bg.png';
 }
   
 
